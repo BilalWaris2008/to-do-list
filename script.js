@@ -5,8 +5,9 @@ const list = document.getElementById("todo-list")
 
 // Try to Load Saved Todos from Local Storage (if any)
 const saved = localStorage.getItem("todos");
-const todos = saved? JSON.parse(saved) : [];
+const todos = saved ? JSON.parse(saved) : [];
 
-function saveTodos(){
-// Save current todos array to Local Storage
+function saveTodos() {
+    // Save current todos array to Local Storage
+    localStorage.setItem('todos', JSON.stringify(todos));
 }
