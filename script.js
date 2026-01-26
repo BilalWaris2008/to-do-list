@@ -13,6 +13,10 @@ function saveTodos() {
 }
 
 // Create a DOM Node for a Todo Object & Append it to the list
-function createNode(){
-    
+function createTodoNode(todo,index){        
+
 } 
+
+function render(){
+    
+}
