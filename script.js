@@ -11,3 +11,8 @@ function saveTodos() {
     // Save current todos array to Local Storage
     localStorage.setItem('todos', JSON.stringify(todos));
 }
+
+// Create a DOM Node for a Todo Object & Append it to the list
+function createNode(){
+    
+} 
