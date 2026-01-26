@@ -19,5 +19,11 @@ function createTodoNode(todo, index) {
 
 // Render the whole Todo list from Todo Array
 function render() {
-    list.innerHTML = '' ;
+    list.innerHTML = '';
+
+    // Recreate Each Item
+    todos.forEach((todo, index) => {
+        const node = createTodoNode(todo, index)
+        list.appendChild(node)
+    });
 }
