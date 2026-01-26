@@ -13,10 +13,11 @@ function saveTodos() {
 }
 
 // Create a DOM Node for a Todo Object & Append it to the list
-function createTodoNode(todo,index){        
+function createTodoNode(todo, index) {
 
-} 
+}
 
-function render(){
-    
+// Render the whole Todo list from Todo Array
+function render() {
+    list.innerHTML = '' ;
 }
