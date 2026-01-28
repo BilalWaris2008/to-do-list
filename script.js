@@ -29,7 +29,8 @@ function createTodoNode(todo, index) {
 
     // Text of the Todo
     const textSpan = document.createElement("span");
-     
+    textSpan.textContent = todo.text;
+    textSpan.style.margin = '0 8px'; 
 }   
 
 // Render the whole Todo list from Todo Array
