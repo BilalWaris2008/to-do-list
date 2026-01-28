@@ -22,8 +22,11 @@ function createTodoNode(todo, index) {
     checkbox.checked = !!todo.completed;
     checkbox.addEventListener("change", ()=>){
         todo.completed = checkbox.checked;
+
+        // Todo: Visual Feedback: strike-through when completed 
+        saveTodos();
     }
-}
+}   
 
 // Render the whole Todo list from Todo Array
 function render() {
