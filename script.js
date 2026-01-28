@@ -14,7 +14,9 @@ function saveTodos() {
 
 // Create a DOM Node for a Todo Object & Append it to the list
 function createTodoNode(todo, index) {
+    const li = document.createElement('li');
 
+    // checkbox to toggle completion
 }
 
 // Render the whole Todo list from Todo Array
