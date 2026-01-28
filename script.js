@@ -33,6 +33,11 @@ function createTodoNode(todo, index) {
     textSpan.style.margin = '0 8px';
     if (todo.completed) {
         textSpan.style.textDecoration = 'line-through';
+
+        // Add double-click Event Listener to edit Todo
+        document.addEventListener('dblclick', () => {
+            const newText = prompt("Edit Todo", todo.text);
+        })
     }
 }
 
