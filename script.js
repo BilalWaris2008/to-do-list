@@ -18,6 +18,8 @@ function createTodoNode(todo, index) {
 
     // checkbox to toggle completion
     const checkbox = document.createElement('input'); 
+    checkbox.type = 'checkbox';
+    checkbox.checked = !!todo.completed;
 }
 
 // Render the whole Todo list from Todo Array
