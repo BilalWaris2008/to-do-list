@@ -17,10 +17,10 @@ function createTodoNode(todo, index) {
     const li = document.createElement('li');
 
     // checkbox to toggle completion
-    const checkbox = document.createElement('input'); 
+    const checkbox = document.createElement('input');
     checkbox.type = 'checkbox';
     checkbox.checked = !!todo.completed;
-    checkbox.addEventListener("change", ()=>{
+    checkbox.addEventListener("change", () => {
         todo.completed = checkbox.checked;
 
         // Todo: Visual Feedback: strike-through when completed 
@@ -30,8 +30,11 @@ function createTodoNode(todo, index) {
     // Text of the Todo
     const textSpan = document.createElement("span");
     textSpan.textContent = todo.text;
-    textSpan.style.margin = '0 8px'; 
-}   
+    textSpan.style.margin = '0 8px';
+    if (todo.completed) {
+        textSpan.style.textDecoration = 'line-through';
+    }
+}
 
 // Render the whole Todo list from Todo Array
 function render() {
