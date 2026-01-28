@@ -17,6 +17,7 @@ function createTodoNode(todo, index) {
     const li = document.createElement('li');
 
     // checkbox to toggle completion
+    const checkbox = document.createElement('input'); 
 }
 
 // Render the whole Todo list from Todo Array
