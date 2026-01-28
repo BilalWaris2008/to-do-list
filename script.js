@@ -20,6 +20,9 @@ function createTodoNode(todo, index) {
     const checkbox = document.createElement('input'); 
     checkbox.type = 'checkbox';
     checkbox.checked = !!todo.completed;
+    checkbox.addEventListener("change", ()=>){
+        todo.completed = checkbox.checked;
+    }
 }
 
 // Render the whole Todo list from Todo Array
