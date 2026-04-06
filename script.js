@@ -48,10 +48,15 @@ function createTodoNode(todo, index) {
         const delBtn = document.createElement('button');
         delBtn.textContent = "Delete";
         delBtn.addEventListener('click', () => {
-            todos.splice(index, 1); 
+            todos.splice(index, 1);
             render();
             saveTodos();
         })
+
+        li.appendChild(checkbox);
+        li.appendChild(textSpan);
+        li.appendChild(delBtn);
+        return li
     }
 }
 
@@ -64,4 +69,15 @@ function render() {
         const node = createTodoNode(todo, index)
         list.appendChild(node)
     });
+}
+
+function addTodo() {
+    const text = input.value.trim();
+    if (!text) {
+        return
+    }
+
+    // Push a new todo object
+    todos.push({ text, completed: false });
+    input.value = '';
 }
