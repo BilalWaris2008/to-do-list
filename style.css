@@ -40,3 +40,19 @@ input {
 #add-btn:hover {
     background: #5a67d8;
 }
+
+ul {
+    list-style: none;
+    padding: 0;
+    margin-top: 15px;
+}
+
+li {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background: #f4f4f4;
+    padding: 8px;
+    border-radius: 7px;
+    margin-bottom: 8px;
+}
