@@ -24,6 +24,7 @@ function createTodoNode(todo, index) {
         todo.completed = checkbox.checked;
 
         // Todo: Visual Feedback: strike-through when completed 
+        textSpan.style.textDecoration = todo.completed ? 'line-through' : "";
         saveTodos();
     })
 
@@ -33,31 +34,35 @@ function createTodoNode(todo, index) {
     textSpan.style.margin = '0 8px';
     if (todo.completed) {
         textSpan.style.textDecoration = 'line-through';
-
-        // Add double-click Event Listener to edit Todo
-        textSpan.addEventListener('dblclick', () => {
-            const newText = prompt("Edit Todo", todo.text);
-            if (newText !== null) {
-                todo.text = newText.trim()
-                textSpan.textContent = todo.text;
-                saveTodos();
-            }
-        })
-
-        // Delete Todo Button
-        const delBtn = document.createElement('button');
-        delBtn.textContent = "Delete";
-        delBtn.addEventListener('click', () => {
-            todos.splice(index, 1);
-            render();
-            saveTodos();
-        })
-
-        li.appendChild(checkbox);
-        li.appendChild(textSpan);
-        li.appendChild(delBtn);
-        return li
     }
+    // Edit Todo Button
+    const editBtn = document.createElement('button');
+    editBtn.textContent = "Edit";
+
+    editBtn.addEventListener('click', () => {
+        const newText = prompt("Edit Todo", todo.text);
+        if (newText !== null) {
+            todo.text = newText.trim()
+            textSpan.textContent = todo.text;       
+            saveTodos();
+        }
+    })
+
+    // Delete Todo Button
+    const delBtn = document.createElement('button');
+    delBtn.textContent = "Delete";
+    delBtn.addEventListener('click', () => {
+        todos.splice(index, 1);
+        render();
+        saveTodos();
+    })
+
+    li.appendChild(checkbox);
+    li.appendChild(textSpan);
+    li.appendChild(editBtn);
+    li.appendChild(delBtn);
+    return li
+
 }
 
 // Render the whole Todo list from Todo Array
@@ -80,4 +85,14 @@ function addTodo() {
     // Push a new todo object
     todos.push({ text, completed: false });
     input.value = '';
+    render()
+    saveTodos()
 }
+
+addBtn.addEventListener('click', addTodo);
+input.addEventListener('keydown', (e) => {
+    if (e.key == 'Enter') {
+        addTodo();
+    }
+})
+render();
