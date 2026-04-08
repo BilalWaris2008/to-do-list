@@ -6,3 +6,12 @@ body {
     align-items: center;
     height: 100vh;
 }
+
+.container {
+    background: white;
+    padding: 25px;
+    width: 400px;
+    border-radius: 15px;
+    text-align: center;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+}
