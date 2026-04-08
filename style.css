@@ -81,3 +81,11 @@ li button:nth-child(4) {
     color: white;
     font-weight: bold;
 }
+
+li button:hover {
+    opacity: 0.8;
+}
+
+input[type="checkbox"] {
+    transform: scale(1.2);
+}
