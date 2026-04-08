@@ -1,0 +1,8 @@
+body {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    background: linear-gradient(#636ccd, #bca0d7);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
