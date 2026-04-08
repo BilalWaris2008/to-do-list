@@ -26,3 +26,17 @@ input {
     border-radius: 7px;
     border: 1px solid rgb(141, 139, 139);
 }
+
+#add-btn {
+    padding: 8px 15px;
+    border: none;
+    background: #636ccd;
+    color: white;
+    border-radius: 7px;
+    transition: 0.2s;
+    cursor: pointer;
+}
+
+#add-btn:hover {
+    background: #5a67d8;
+}
